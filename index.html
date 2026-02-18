@@ -1,31 +1,49 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-     <link rel="stylesheet" href="style.css"
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube (Лабораторная работа)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <header class="header">
-      <div class="header-left">
-        <button class="menu-btn">≡</button>
-        <div class="logo">
-          <span class="logo-icon">▶️</span>
-          <span class="logo-text">YouTube</span>
+        <div class="header-left">
+            <button class="menu-btn">☰</button>
+            <div class="logo">
+                <span class="logo-icon">▶️</span>
+                <span class="logo-text">YouTube</span>
+            </div>
         </div>
-      </div>
 
-      <div class="header-center">
-        <input type="text" placeholder="Поиск" class="search-input" />
-        <button class="search-btn">🔍</button>
-      </div>
+        <div class="header-center">
+            <input type="text" placeholder="Поиск" class="search-input">
+            <button class="search-btn">🔍</button>
+        </div>
 
-      <div class="header-right">
-        <button>➕</button>
-        <button>🔔</button>
-        <img src="https://placehold.ru/32" alt="Avatar" class="avatar" />
-      </div>
+        <div class="header-right">
+            <button class="create-btn">➕</button>
+            <button class="notifications-btn">🔔</button>
+            <img src="https://via.placeholder.com/32" alt="Avatar" class="avatar">
+        </div>
     </header>
-  </body>
+
+    <div class="content">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-link active">🏠 Главная</a>
+                <a href="#" class="nav-link">🔥 В тренде</a>
+                <a href="#" class="nav-link">📩 Подписки</a>
+                <a href="#" class="nav-link">📚 Библиотека</a>
+                <hr class="divider">
+                <a href="#" class="nav-link">⏱ История</a>
+                <a href="#" class="nav-link">👍 Понравилось</a>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <h2>Здесь будут видео</h2>
+        </main>
+    </div>
+</body>
 </html>
