@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube (Лабораторная работа)</title>
+    <title>YouTube Clone</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,35 +15,56 @@
                 <span class="logo-text">YouTube</span>
             </div>
         </div>
-
+        
         <div class="header-center">
-            <input type="text" placeholder="Поиск" class="search-input">
+            <input type="text" placeholder="Поиск" class="search-input" />
             <button class="search-btn">🔍</button>
         </div>
-
+        
         <div class="header-right">
             <button class="create-btn">➕</button>
             <button class="notifications-btn">🔔</button>
-            <img src="https://via.placeholder.com/32" alt="Avatar" class="avatar">
+            <img src="https://via.placeholder.com/32" alt="Avatar" class="avatar" />
         </div>
     </header>
 
     <div class="content">
         <aside class="sidebar">
             <nav class="sidebar-nav">
-                <a href="#" class="nav-link active">🏠 Главная</a>
-                <a href="#" class="nav-link">🔥 В тренде</a>
-                <a href="#" class="nav-link">📩 Подписки</a>
-                <a href="#" class="nav-link">📚 Библиотека</a>
+                <a href="#" class="nav-link active">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Главная</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">🔥</span>
+                    <span class="nav-text">В тренде</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">📧</span>
+                    <span class="nav-text">Подписки</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Библиотека</span>
+                </a>
                 <hr class="divider">
-                <a href="#" class="nav-link">⏱ История</a>
-                <a href="#" class="nav-link">👍 Понравилось</a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">⏰</span>
+                    <span class="nav-text">История</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">👍</span>
+                    <span class="nav-text">Понравилось</span>
+                </a>
             </nav>
         </aside>
-
-        <main class="main">
-            <h2>Здесь будут видео</h2>
-        </main>
-    </div>
-</body>
-</html>
+                <main class="main">
+            <div class="chips">
+                <button class="chip active">Все</button>
+                <button class="chip">Музыка</button>
+                <button class="chip">Игры</button>
+                <button class="chip">Новости</button>
+                <button class="chip">Спорт</button>
+                <button class="chip">Образование</button>
+                <button class="chip">Технологии</button>
+            </div>

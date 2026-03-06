@@ -4,130 +4,200 @@
     box-sizing: border-box;
 }
 
-.body {
-    font-family: Arial, sans-serif;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     background-color: #f9f9f9;
 }
+
 .header {
-    background-color: white;
-    padding: 0 16px;
-    height: 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 56px;
+    padding: 0 16px;
+    background-color: white;
     border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-.header-left,
-.header-center,
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
 .header-right {
     display: flex;
     align-items: center;
     gap: 16px;
 }
-.header-center {
-    flex: 1;
-    max-width: 600px;
-    margin: 0 40px;
-    gap: 0;
-}
-.search-input {
-  flex: 1;
-  height: 40px;
-  border: 1px solid #ccc;
-  border-right: none;
-  border-radius: 40px 0 0 40px;
-  padding: 0 16px;
-  font-size: 16px;
-  outline: none;
-}
-button {
+
+.menu-btn, .create-btn, .notifications-btn, .search-btn {
     width: 40px;
     height: 40px;
     border: none;
-    background: transparent;
     border-radius: 50%;
+    background: transparent;
+    font-size: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
     transition: background-color 0.2s;
 }
-button:hover {
-    background-color: f2f2f2;
+
+.menu-btn:hover, .create-btn:hover, .notifications-btn:hover {
+    background-color: #f2f2f2;
 }
+
 .logo {
     display: flex;
     align-items: center;
     gap: 4px;
-    font-weight: 500;
     cursor: pointer;
-    user-select: none;
 }
+
 .logo-icon {
-    color: #ff0000;
     font-size: 24px;
+    color: #ff0000;
 }
+
 .logo-text {
     font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    user-select: none;
 }
+
+.search-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-input:focus {
+    border-color: #065fd4;
+}
+
+.search-btn {
+    width: 64px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    background-color: #f8f8f8;
+    font-size: 18px;
+}
+
+.search-btn:hover {
+    background-color: #f0f0f0;
+}
+
 .avatar {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    display: block;
+    object-fit: cover;
 }
-.search-input:focus {
-    border-color: #065fd4;
-}
-.search-btn {
-    width: 64px;
-    height: 40px;
-    border-radius: 0 40px 40px 0;
-    border: 1px solid #ccc;
-    border-left: none;
-    background-color: #f8f8f8;
-    cursor: pointer;
-}
-.search-btn:hover {
-    background-color: #f0f0f0;
-}
+
 .content {
     display: flex;
+    min-height: calc(100vh - 56px);
 }
+
 .sidebar {
     width: 240px;
     background-color: white;
-    padding: 12px 0 ;
+    padding: 12px 0;
     height: calc(100vh - 56px);
+    position: sticky;
+    top: 56px;
     overflow-y: auto;
 }
-.sidebar nav {
+
+.sidebar-nav {
     display: flex;
     flex-direction: column;
 }
-.sidebar-link {
+
+.nav-link {
     display: flex;
     align-items: center;
-    gap: 24px;
     padding: 10px 24px;
+    gap: 24px;
     color: #030303;
     text-decoration: none;
     transition: background-color 0.2s;
 }
-.sidebar-link:hover {
+
+.nav-link:hover {
     background-color: #f2f2f2;
 }
-.sidebar-link.active {
+
+.nav-link.active {
     background-color: #e5e5e5;
     font-weight: 500;
 }
-.sidebar hr {
+
+.nav-icon {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+}
+
+.nav-text {
+    font-size: 14px;
+}
+
+.divider {
+    margin: 12px 0;
     border: none;
     border-top: 1px solid #e5e5e5;
-    margin: 12px 0;
 }
+
 .main {
     flex: 1;
     padding: 24px;
+    background-color: #f9f9f9;
+}
+.chips {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+}
+.chip {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 16px;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    min-width: 60px;
+    text-align: center;
+}
+.chip:hover {
+    background-color: #e5e5e5;
+}
+
+.chip.active {
+    background-color: #030303;
+    color: white;
 }
