@@ -286,3 +286,60 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 16px;
 }
+@media (max-width: 600px) {
+    .header {
+        height: 52px;
+        padding: 0 12px;
+    }
+    
+    .header-center {
+        margin: 0 8px;
+    }
+    
+    .search-input {
+        height: 36px;
+        font-size: 14px;
+    }
+    
+    .search-btn {
+        height: 36px;
+        width: 44px;
+    }
+    
+    .menu-btn, .create-btn, .notifications-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+    
+    .logo-text {
+        font-size: 16px;
+    }
+    
+    .logo-icon {
+        font-size: 20px;
+    }
+    
+    .avatar {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .main {
+        padding: 16px;
+    }
+    
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .chips {
+        margin-bottom: 16px;
+    }
+    
+    .chip {
+        padding: 6px 14px;
+        font-size: 13px;
+    }
+}
